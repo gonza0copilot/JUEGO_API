@@ -304,232 +304,307 @@
         }
     ],
     "l4d2": [
-    {
-        "pregunta": "¿Cuántos supervivientes principales tiene Left 4 Dead 2?",
-        "opciones": [
-            "4",
-            "3",
-            "5",
-            "6"
-        ],
-        "correcta": "4"
-    },
-    {
-        "pregunta": "¿Cómo se llama el entrenador del grupo?",
-        "opciones": [
-            "Coach",
-            "Bill",
-            "Louis",
-            "Nick"
-        ],
-        "correcta": "Coach"
-    },
-    {
-        "pregunta": "¿Qué personaje viste siempre un traje blanco?",
-        "opciones": [
-            "Nick",
-            "Ellis",
-            "Coach",
-            "Rochelle"
-        ],
-        "correcta": "Nick"
-    },
-    {
-        "pregunta": "¿Qué personaje es un mecánico joven?",
-        "opciones": [
-            "Ellis",
-            "Nick",
-            "Coach",
-            "Francis"
-        ],
-        "correcta": "Ellis"
-    },
-    {
-        "pregunta": "¿Cuál es el nombre de la única mujer del grupo principal?",
-        "opciones": [
-            "Rochelle",
-            "Zoey",
-            "Witch",
-            "Sarah"
-        ],
-        "correcta": "Rochelle"
-    },
-    {
-        "pregunta": "¿Qué infectado especial puede arrastrar a los supervivientes con su lengua?",
-        "opciones": [
-            "Smoker",
-            "Hunter",
-            "Jockey",
-            "Boomer"
-        ],
-        "correcta": "Smoker"
-    },
-    {
-        "pregunta": "¿Qué infectado especial explota cubriendo a los jugadores con bilis?",
-        "opciones": [
-            "Boomer",
-            "Tank",
-            "Charger",
-            "Spitter"
-        ],
-        "correcta": "Boomer"
-    },
-    {
-        "pregunta": "¿Qué infectado especial tiene una fuerza enorme y puede lanzar objetos?",
-        "opciones": [
-            "Tank",
-            "Hunter",
-            "Smoker",
-            "Jockey"
-        ],
-        "correcta": "Tank"
-    },
-    {
-        "pregunta": "¿Qué infectado especial monta a los supervivientes y controla su movimiento?",
-        "opciones": [
-            "Jockey",
-            "Smoker",
-            "Boomer",
-            "Witch"
-        ],
-        "correcta": "Jockey"
-    },
-    {
-        "pregunta": "¿Qué infectado especial carga contra los supervivientes con un brazo gigante?",
-        "opciones": [
-            "Charger",
-            "Tank",
-            "Hunter",
-            "Spitter"
-        ],
-        "correcta": "Charger"
-    },
-    {
-        "pregunta": "¿Qué infectado especial escupe ácido en el suelo?",
-        "opciones": [
-            "Spitter",
-            "Hunter",
-            "Boomer",
-            "Jockey"
-        ],
-        "correcta": "Spitter"
-    },
-    {
-        "pregunta": "¿Qué infectado especial ataca saltando sobre los supervivientes?",
-        "opciones": [
-            "Hunter",
-            "Tank",
-            "Boomer",
-            "Smoker"
-        ],
-        "correcta": "Hunter"
-    },
-    {
-        "pregunta": "¿Qué infectado especial llora antes de atacar y suele estar quieta?",
-        "opciones": [
-            "Witch",
-            "Spitter",
-            "Boomer",
-            "Charger"
-        ],
-        "correcta": "Witch"
-    },
-    {
-        "pregunta": "¿Qué empresa desarrolló Left 4 Dead 2?",
-        "opciones": [
-            "Valve",
-            "Rockstar",
-            "Ubisoft",
-            "EA"
-        ],
-        "correcta": "Valve"
-    },
-    {
-        "pregunta": "¿En qué año fue lanzado Left 4 Dead 2?",
-        "opciones": [
-            "2009",
-            "2008",
-            "2010",
-            "2011"
-        ],
-        "correcta": "2009"
-    }
-],
-"mafia3": [
-  {
-    "pregunta": "¿Cómo se llama el protagonista de Mafia III?",
-    "opciones": ["Lincoln Clay", "Tommy Angelo", "Vito Scaletta", "Joe Barbaro"],
-    "correcta": "Lincoln Clay"
-  },
-  {
-    "pregunta": "¿En qué ciudad ficticia se desarrolla Mafia III?",
-    "opciones": ["New Bordeaux", "Empire Bay", "Lost Heaven", "Liberty City"],
-    "correcta": "New Bordeaux"
-  },
-  {
-    "pregunta": "¿En qué año transcurre principalmente la historia?",
-    "opciones": ["1968", "1951", "1975", "1985"],
-    "correcta": "1968"
-  },
-  {
-    "pregunta": "¿Qué veterano de guerra es Lincoln Clay?",
-    "opciones": ["Vietnam", "Corea", "Irak", "Afganistán"],
-    "correcta": "Vietnam"
-  },
-  {
-    "pregunta": "¿Qué organización traiciona a Lincoln al comienzo del juego?",
-    "opciones": ["La mafia italiana", "La Yakuza", "Los Triadas", "La Hermandad"],
-    "correcta": "La mafia italiana"
-  },
-  {
-    "pregunta": "¿Cómo se llama el jefe mafioso responsable de la traición?",
-    "opciones": ["Sal Marcano", "Leo Galante", "Frank Vinci", "Tom Hagen"],
-    "correcta": "Sal Marcano"
-  },
-  {
-    "pregunta": "¿Qué personaje de Mafia II aparece en Mafia III?",
-    "opciones": ["Vito Scaletta", "Joe Barbaro", "Tommy Angelo", "Henry Tomasino"],
-    "correcta": "Vito Scaletta"
-  },
-  {
-    "pregunta": "¿Cuál es el objetivo principal de Lincoln Clay?",
-    "opciones": ["Vengarse de Sal Marcano", "Robar un banco", "Escapar de la ciudad", "Ser alcalde"],
-    "correcta": "Vengarse de Sal Marcano"
-  },
-  {
-    "pregunta": "¿Qué sacerdote ayuda a Lincoln durante la historia?",
-    "opciones": ["Padre James", "Padre Paul", "Padre Michael", "Padre John"],
-    "correcta": "Padre James"
-  },
-  {
-    "pregunta": "¿Qué empresa desarrolló Mafia III?",
-    "opciones": ["Hangar 13", "Valve", "Rockstar North", "Ubisoft"],
-    "correcta": "Hangar 13"
-  },
-  {
-    "pregunta": "¿Qué empresa publicó Mafia III?",
-    "opciones": ["2K Games", "EA", "Activision", "Valve"],
-    "correcta": "2K Games"
-  },
-  {
-    "pregunta": "¿En qué año fue lanzado Mafia III?",
-    "opciones": ["2016", "2014", "2012", "2018"],
-    "correcta": "2016"
-  },
-  {
-    "pregunta": "¿Qué color predomina en el logo de Mafia III?",
-    "opciones": ["Rojo", "Azul", "Verde", "Amarillo"],
-    "correcta": "Rojo"
-  },
-  {
-    "pregunta": "¿Qué actividad realiza Lincoln para debilitar a las bandas rivales?",
-    "opciones": ["Tomar distritos", "Construir negocios", "Participar en carreras", "Comprar propiedades"],
-    "correcta": "Tomar distritos"
-  },
-  {
-    "pregunta": "¿Qué género describe mejor a Mafia III?",
-    "opciones": ["Acción y mundo abierto", "Estrategia", "RPG por turnos", "Simulación"],
-    "correcta": "Acción y mundo abierto"
-  }
-]
+        {
+            "pregunta": "¿Cuántos supervivientes principales tiene Left 4 Dead 2?",
+            "opciones": [
+                "4",
+                "3",
+                "5",
+                "6"
+            ],
+            "correcta": "4"
+        },
+        {
+            "pregunta": "¿Cómo se llama el entrenador del grupo?",
+            "opciones": [
+                "Coach",
+                "Bill",
+                "Louis",
+                "Nick"
+            ],
+            "correcta": "Coach"
+        },
+        {
+            "pregunta": "¿Qué personaje viste siempre un traje blanco?",
+            "opciones": [
+                "Nick",
+                "Ellis",
+                "Coach",
+                "Rochelle"
+            ],
+            "correcta": "Nick"
+        },
+        {
+            "pregunta": "¿Qué personaje es un mecánico joven?",
+            "opciones": [
+                "Ellis",
+                "Nick",
+                "Coach",
+                "Francis"
+            ],
+            "correcta": "Ellis"
+        },
+        {
+            "pregunta": "¿Cuál es el nombre de la única mujer del grupo principal?",
+            "opciones": [
+                "Rochelle",
+                "Zoey",
+                "Witch",
+                "Sarah"
+            ],
+            "correcta": "Rochelle"
+        },
+        {
+            "pregunta": "¿Qué infectado especial puede arrastrar a los supervivientes con su lengua?",
+            "opciones": [
+                "Smoker",
+                "Hunter",
+                "Jockey",
+                "Boomer"
+            ],
+            "correcta": "Smoker"
+        },
+        {
+            "pregunta": "¿Qué infectado especial explota cubriendo a los jugadores con bilis?",
+            "opciones": [
+                "Boomer",
+                "Tank",
+                "Charger",
+                "Spitter"
+            ],
+            "correcta": "Boomer"
+        },
+        {
+            "pregunta": "¿Qué infectado especial tiene una fuerza enorme y puede lanzar objetos?",
+            "opciones": [
+                "Tank",
+                "Hunter",
+                "Smoker",
+                "Jockey"
+            ],
+            "correcta": "Tank"
+        },
+        {
+            "pregunta": "¿Qué infectado especial monta a los supervivientes y controla su movimiento?",
+            "opciones": [
+                "Jockey",
+                "Smoker",
+                "Boomer",
+                "Witch"
+            ],
+            "correcta": "Jockey"
+        },
+        {
+            "pregunta": "¿Qué infectado especial carga contra los supervivientes con un brazo gigante?",
+            "opciones": [
+                "Charger",
+                "Tank",
+                "Hunter",
+                "Spitter"
+            ],
+            "correcta": "Charger"
+        },
+        {
+            "pregunta": "¿Qué infectado especial escupe ácido en el suelo?",
+            "opciones": [
+                "Spitter",
+                "Hunter",
+                "Boomer",
+                "Jockey"
+            ],
+            "correcta": "Spitter"
+        },
+        {
+            "pregunta": "¿Qué infectado especial ataca saltando sobre los supervivientes?",
+            "opciones": [
+                "Hunter",
+                "Tank",
+                "Boomer",
+                "Smoker"
+            ],
+            "correcta": "Hunter"
+        },
+        {
+            "pregunta": "¿Qué infectado especial llora antes de atacar y suele estar quieta?",
+            "opciones": [
+                "Witch",
+                "Spitter",
+                "Boomer",
+                "Charger"
+            ],
+            "correcta": "Witch"
+        },
+        {
+            "pregunta": "¿Qué empresa desarrolló Left 4 Dead 2?",
+            "opciones": [
+                "Valve",
+                "Rockstar",
+                "Ubisoft",
+                "EA"
+            ],
+            "correcta": "Valve"
+        },
+        {
+            "pregunta": "¿En qué año fue lanzado Left 4 Dead 2?",
+            "opciones": [
+                "2009",
+                "2008",
+                "2010",
+                "2011"
+            ],
+            "correcta": "2009"
+        }
+    ],
+    "mafia3": [
+        {
+            "pregunta": "¿Cómo se llama el protagonista de Mafia III?",
+            "opciones": [
+                "Lincoln Clay",
+                "Tommy Angelo",
+                "Vito Scaletta",
+                "Joe Barbaro"
+            ],
+            "correcta": "Lincoln Clay"
+        },
+        {
+            "pregunta": "¿En qué ciudad ficticia se desarrolla Mafia III?",
+            "opciones": [
+                "New Bordeaux",
+                "Empire Bay",
+                "Lost Heaven",
+                "Liberty City"
+            ],
+            "correcta": "New Bordeaux"
+        },
+        {
+            "pregunta": "¿En qué año transcurre principalmente la historia?",
+            "opciones": [
+                "1968",
+                "1951",
+                "1975",
+                "1985"
+            ],
+            "correcta": "1968"
+        },
+        {
+            "pregunta": "¿Qué veterano de guerra es Lincoln Clay?",
+            "opciones": [
+                "Vietnam",
+                "Corea",
+                "Irak",
+                "Afganistán"
+            ],
+            "correcta": "Vietnam"
+        },
+        {
+            "pregunta": "¿Qué organización traiciona a Lincoln al comienzo del juego?",
+            "opciones": [
+                "La mafia italiana",
+                "La Yakuza",
+                "Los Triadas",
+                "La Hermandad"
+            ],
+            "correcta": "La mafia italiana"
+        },
+        {
+            "pregunta": "¿Cómo se llama el jefe mafioso responsable de la traición?",
+            "opciones": [
+                "Sal Marcano",
+                "Leo Galante",
+                "Frank Vinci",
+                "Tom Hagen"
+            ],
+            "correcta": "Sal Marcano"
+        },
+        {
+            "pregunta": "¿Qué personaje de Mafia II aparece en Mafia III?",
+            "opciones": [
+                "Vito Scaletta",
+                "Joe Barbaro",
+                "Tommy Angelo",
+                "Henry Tomasino"
+            ],
+            "correcta": "Vito Scaletta"
+        },
+        {
+            "pregunta": "¿Cuál es el objetivo principal de Lincoln Clay?",
+            "opciones": [
+                "Vengarse de Sal Marcano",
+                "Robar un banco",
+                "Escapar de la ciudad",
+                "Ser alcalde"
+            ],
+            "correcta": "Vengarse de Sal Marcano"
+        },
+        {
+            "pregunta": "¿Qué sacerdote ayuda a Lincoln durante la historia?",
+            "opciones": [
+                "Padre James",
+                "Padre Paul",
+                "Padre Michael",
+                "Padre John"
+            ],
+            "correcta": "Padre James"
+        },
+        {
+            "pregunta": "¿Qué empresa desarrolló Mafia III?",
+            "opciones": [
+                "Hangar 13",
+                "Valve",
+                "Rockstar North",
+                "Ubisoft"
+            ],
+            "correcta": "Hangar 13"
+        },
+        {
+            "pregunta": "¿Qué empresa publicó Mafia III?",
+            "opciones": [
+                "2K Games",
+                "EA",
+                "Activision",
+                "Valve"
+            ],
+            "correcta": "2K Games"
+        },
+        {
+            "pregunta": "¿En qué año fue lanzado Mafia III?",
+            "opciones": [
+                "2016",
+                "2014",
+                "2012",
+                "2018"
+            ],
+            "correcta": "2016"
+        },
+        {
+            "pregunta": "¿Qué color predomina en el logo de Mafia III?",
+            "opciones": [
+                "Rojo",
+                "Azul",
+                "Verde",
+                "Amarillo"
+            ],
+            "correcta": "Rojo"
+        },
+        {
+            "pregunta": "¿Qué actividad realiza Lincoln para debilitar a las bandas rivales?",
+            "opciones": [
+                "Tomar distritos",
+                "Construir negocios",
+                "Participar en carreras",
+                "Comprar propiedades"
+            ],
+            "correcta": "Tomar distritos"
+        },
+        {
+            "pregunta": "¿Qué género describe mejor a Mafia III?",
+            "opciones": [
+                "Acción y mundo abierto",
+                "Estrategia",
+                "RPG por turnos",
+                "Simulación"
+            ],
+            "correcta": "Acción y mundo abierto"
+        }
+    ]
 }
