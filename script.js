@@ -9,10 +9,10 @@ let gradosTotales = 0;
 
 const categorias = [
     "GTA IV",
-    "TF2",
-    "L4D2",
+    "TEAM Fortress 2",
+    "LEFT 4 DEAD 2",
     "MAFIA III",
-    "API",
+    "EXTRA API",
 ];
 
 botonGirar.addEventListener('click', () => {
