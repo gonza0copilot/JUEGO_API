@@ -11,3 +11,27 @@ botonGirar.addEventListener('click', () => {
     // Aplicamos la rotación
     ruleta.style.transform = `rotate(${gradosTotales}deg)`;
 });
+
+const categoria = "gta4";
+const preguntas = datos[categoria];
+const preguntaAleatoria =
+    preguntas[Math.floor(Math.random() * preguntas.length)
+    ];
+
+const categoria = "tf2";
+const pregunta =
+    preguntas[categoria][
+    Math.floor(Math.random() * preguntas[categoria].length)
+    ];
+
+const categoria = "l4d2";
+const pregunta =
+    preguntas[categoria][
+    Math.floor(Math.random() * preguntas[categoria].length)
+    ];
+
+const categoria = "mafia3";
+const pregunta =
+    preguntas[categoria][
+    Math.floor(Math.random() * preguntas[categoria].length)
+    ];
