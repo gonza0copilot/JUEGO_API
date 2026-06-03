@@ -1,7 +1,11 @@
 const ruleta = document.getElementById('ruleta');
 const botonGirar = document.getElementById('botonGirar');
 
+
+
 let gradosTotales = 0;
+
+
 
 const categorias = [
     "GTA IV",
