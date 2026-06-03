@@ -30,7 +30,7 @@ ruleta.addEventListener('transitionend', () => {
 
     const indice =
         Math.floor(
-            ((360 - gradosFinales) % 360)
+            (((360 - gradosFinales)+83) % 360)
             / gradosPorSector
         );
 

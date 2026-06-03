@@ -15,7 +15,7 @@ body {
 .opcion {
     position: absolute; top: 0; left: 0; width: 50%; height: 50%;
     transform-origin: 100% 100%;
-    transform: rotate(calc(60deg * var(--i)));
+    transform: rotate(calc(72deg * var(--i)));
     clip-path: polygon(100% 100%, 100% 0, 0 0, 0 100%);
     background-color: var(--clr); display: flex; justify-content: center;
     align-items: center;
