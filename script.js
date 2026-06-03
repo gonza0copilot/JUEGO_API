@@ -35,3 +35,20 @@ const pregunta =
     preguntas[categoria][
     Math.floor(Math.random() * preguntas[categoria].length)
     ];
+
+fetch(
+  "https://opentdb.com/api.php?amount=1&category=15&difficulty=medium&type=multiple"
+)   
+async function obtenerPreguntaAPI() {
+    const respuesta = await fetch(
+        "https://opentdb.com/api.php?amount=1&category=15&difficulty=medium&type=multiple"
+    );
+
+    const datos = await respuesta.json();
+
+    const pregunta = datos.results[0];
+
+    console.log("Pregunta:", pregunta.question);
+    console.log("Correcta:", pregunta.correct_answer);
+    console.log("Incorrectas:", pregunta.incorrect_answers);
+} 
