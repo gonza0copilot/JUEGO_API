@@ -1,0 +1,37 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    display: flex; justify-content: center; align-items: center;
+    height: 100vh; background-color: #222; font-family: sans-serif;
+}
+.contenedor {
+    position: relative; display: flex; flex-direction: column;
+    align-items: center;
+}
+.ruleta {
+    width: 400px; height: 400px; border-radius: 50%;
+    border: 10px solid white; position: relative; overflow: hidden;
+    transition: transform 4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.opcion {
+    position: absolute; top: 0; left: 0; width: 50%; height: 50%;
+    transform-origin: 100% 100%;
+    transform: rotate(calc(90deg * var(--i)));
+    clip-path: triangle(0 100%, 100% 100%, 100% 0);
+    background-color: var(--clr); display: flex; justify-content: center;
+    align-items: center;
+}
+.opcion span {
+    position: absolute; font-size: 18px; font-weight: bold; color: white;
+    transform: rotate(45deg) translateX(50px);
+}
+.flecha {
+    font-size: 30px; color: yellow; position: absolute;
+    top: -40px; z-index: 10; text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+button {
+    margin-top: 30px; padding: 15px 30px; font-size: 20px;
+    font-weight: bold; cursor: pointer; background-color: #ffeb3b;
+    border: none; border-radius: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+button:active { transform: scale(0.95); }
+
