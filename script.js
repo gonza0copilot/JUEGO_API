@@ -1,19 +1,40 @@
 const ruleta = document.getElementById('ruleta');
 const botonGirar = document.getElementById('botonGirar');
 const preguntaContainer = document.getElementById("pregunta-container");
-let gradosTotales = 0;
-let preguntas = {};
-let respuestaCorrecta = "";
+
+const categorias = [
+    "GTA IV",
+    "TEAM Fortress 2",
+    "LEFT 4 DEAD 2",
+    "MAFIA III",
+    "EXTRA API",
+];
+
+const mapaCategorias = {
+    "GTA IV": "gta4",
+    "TEAM Fortress 2": "tf2",
+    "LEFT 4 DEAD 2": "l4d2",
+    "MAFIA III": "mafia3"
+};
+
+const ImgCategorias = {
+    "GTA IV":"img/gta IV banner.jfif",
+    "TEAM Fortress 2":"img/TF banner.jpg",
+    "LEFT 4 DEAD 2":"img/l4d2 banner.jpg",
+    "MAFIA III":"img/mafiaIII banner.jpeg",
+    "EXTRA API":"img/pregunta banner.jfif"
+}
 
 const URL_API =
     "https://opentdb.com/api.php?amount=1&category=15&type=multiple";
 
-    async function obtenerPreguntaAPI() {
+let gradosTotales = 0;
+let preguntas = {};
+let respuestaCorrecta = "";
 
+async function obtenerPreguntaAPI() {
     const respuesta = await fetch(URL_API);
-
     const datos = await respuesta.json();
-
     console.log(datos);
 
     const preguntaAPI = datos.results[0];
@@ -32,11 +53,13 @@ const URL_API =
     };
 }
 
-function mostrarPregunta(pregunta) {
-
+function mostrarPregunta(pregunta, categoria) {
     respuestaCorrecta = pregunta.correcta;
 
     preguntaContainer.innerHTML = `
+    <img class="imagenJuego"
+             src="${ImgCategorias[categoria]}"
+             alt="${categoria}">
         <h2>${pregunta.pregunta}</h2>
 
         <button class="opcioness">${pregunta.opciones[0]}</button>
@@ -44,46 +67,33 @@ function mostrarPregunta(pregunta) {
         <button class="opcioness">${pregunta.opciones[2]}</button>
         <button class="opcioness">${pregunta.opciones[3]}</button>
     `;
-    
+      preguntaContainer.classList.remove("oculto");
+
     const botones = document.querySelectorAll(".opcioness");
 
     botones.forEach(boton => {
-
         boton.addEventListener("click", () => {
-
             botones.forEach(b => {
-
                 b.disabled = true;
 
                 if (b.textContent.trim() === respuestaCorrecta.trim()) {
                     b.style.backgroundColor = "green";
                     b.style.color = "white";
                 }
-
             });
 
             if (boton.textContent.trim() !== respuestaCorrecta.trim()) {
                 boton.style.backgroundColor = "red";
                 boton.style.color = "white";
             }
-
         });
-
     });
-
 }
 
 
 
 
 
-
-fetch("data.json")
-    .then(respuesta => respuesta.json())
-    .then(datos => {
-        preguntas = datos;
-        console.log("Preguntas cargadas");
-    });
 
 function obtenerPreguntaAleatoria(categoria) {
 
@@ -95,22 +105,20 @@ function obtenerPreguntaAleatoria(categoria) {
     return listaPreguntas[indiceAleatorio];
 }
 
-const categorias = [
-    "GTA IV",
-    "TEAM Fortress 2",
-    "LEFT 4 DEAD 2",
-    "MAFIA III",
-    "EXTRA API",
-];
-
-const mapaCategorias = {
-    "GTA IV": "gta4",
-    "TEAM Fortress 2": "tf2",
-    "LEFT 4 DEAD 2": "l4d2",
-    "MAFIA III": "mafia3"
-};
+fetch("data.json")
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+        preguntas = datos;
+        console.log("Preguntas cargadas");
+    });
 
 botonGirar.addEventListener('click', () => {
+    botonGirar.disabled = true;
+      preguntaContainer.classList.add("oculto");
+      setTimeout(() => {
+        preguntaContainer.innerHTML = "";
+    }, 500); 
+
     const giroAleatorio =
         Math.floor(Math.random() * 3000) + 3000;
 
@@ -122,6 +130,7 @@ botonGirar.addEventListener('click', () => {
 
 
 ruleta.addEventListener('transitionend', () => {
+    botonGirar.disabled = false;
 
     const gradosFinales = gradosTotales % 360;
 
@@ -137,32 +146,26 @@ ruleta.addEventListener('transitionend', () => {
     console.log("Categoria detectada:", categoria);
     console.log("Clave JSON:", mapaCategorias[categoria]);
 
-    console.log("Categoría:", categoria);
-    alert("Salió: " + categoria);
+    
 
 
     if (categoria !== "EXTRA API") {
+        const pregunta =
+            obtenerPreguntaAleatoria(
+                mapaCategorias[categoria]
+            );
 
-    const pregunta =
-        obtenerPreguntaAleatoria(
-            mapaCategorias[categoria]
-        );
-
-    mostrarPregunta(pregunta);
-
-} else {
-
-    obtenerPreguntaAPI()
-        .then(pregunta => {
-            mostrarPregunta(pregunta);
-        })
-        .catch(error => {
-            console.error(error);
-            alert("Error al cargar la pregunta");
-        });
-
-}
-
+        mostrarPregunta(pregunta, categoria);
+    } else {
+        obtenerPreguntaAPI()
+            .then(pregunta => {
+                mostrarPregunta(pregunta, categoria);
+            })
+            .catch(error => {
+                console.error(error);
+                alert("Error al cargar la pregunta");
+            });
+    }
 });
 
 
