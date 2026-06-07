@@ -4,6 +4,56 @@ const preguntaContainer = document.getElementById("pregunta-container");
 let gradosTotales = 0;
 let preguntas = {};
 let respuestaCorrecta = "";
+const URL_API =
+    "https://opentdb.com/api.php?amount=1&category=15&type=multiple";
+    async function obtenerPreguntaAPI() {
+
+    const respuesta = await fetch(URL_API);
+
+    const datos = await respuesta.json();
+
+    const preguntaAPI = datos.resultados[0];
+
+    const opciones = [
+        ...preguntaAPI.respuestas_incorrectas,
+        preguntaAPI.respuestaCorrecta
+    ];
+
+    opciones.sort(() => Math.random() - 0.5);
+
+    return {
+        pregunta: preguntaAPI.preguntas,
+        opciones: opciones,
+        correcta: preguntaAPI.respuestaCorrecta
+    };
+}
+
+function mostrarPregunta(pregunta) {
+
+    respuestaCorrecta = pregunta.correcta;
+
+    preguntaContainer.innerHTML = `
+        <h2>${pregunta.pregunta}</h2>
+
+        <button class="opcioness">${pregunta.opciones[0]}</button>
+        <button class="opcioness">${pregunta.opciones[1]}</button>
+        <button class="opcioness">${pregunta.opciones[2]}</button>
+        <button class="opcioness">${pregunta.opciones[3]}</button>
+    `;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 fetch("data.json")
     .then(respuesta => respuesta.json())
@@ -79,33 +129,27 @@ ruleta.addEventListener('transitionend', () => {
     alert("Salió: " + categoria);
 
 
-
-
     if (categoria !== "EXTRA API") {
 
-        const pregunta =
-            obtenerPreguntaAleatoria(
-                mapaCategorias[categoria]
-            );
+    const pregunta =
+        obtenerPreguntaAleatoria(
+            mapaCategorias[categoria]
+        );
 
-        console.log(pregunta);
+    mostrarPregunta(pregunta);
 
-        preguntaContainer.innerHTML = `
-    <h2>${pregunta.pregunta}</h2>
+} else {
 
-    <button class="opcioness">${pregunta.opciones[0]}</button>
-    <button class="opcioness">${pregunta.opciones[1]}</button>
-    <button class="opcioness">${pregunta.opciones[2]}</button>
-    <button class="opcioness">${pregunta.opciones[3]}</button>
-`;
+    obtenerPreguntaAPI()
+        .then(pregunta => {
+            mostrarPregunta(pregunta);
+        })
+        .catch(error => {
+            console.error(error);
+            alert("Error al cargar la pregunta");
+        });
 
-
-
-    } else {
-
-        alert("Pregunta desde Open Trivia DB");
-
-    }
+}
 
 
 
