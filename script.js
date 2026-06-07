@@ -4,27 +4,31 @@ const preguntaContainer = document.getElementById("pregunta-container");
 let gradosTotales = 0;
 let preguntas = {};
 let respuestaCorrecta = "";
+
 const URL_API =
     "https://opentdb.com/api.php?amount=1&category=15&type=multiple";
+
     async function obtenerPreguntaAPI() {
 
     const respuesta = await fetch(URL_API);
 
     const datos = await respuesta.json();
 
-    const preguntaAPI = datos.resultados[0];
+    console.log(datos);
+
+    const preguntaAPI = datos.results[0];
 
     const opciones = [
-        ...preguntaAPI.respuestas_incorrectas,
-        preguntaAPI.respuestaCorrecta
+        ...preguntaAPI.incorrect_answers,
+        preguntaAPI.correct_answer
     ];
 
     opciones.sort(() => Math.random() - 0.5);
 
     return {
-        pregunta: preguntaAPI.preguntas,
+        pregunta: preguntaAPI.question,
         opciones: opciones,
-        correcta: preguntaAPI.respuestaCorrecta
+        correcta: preguntaAPI.correct_answer
     };
 }
 
@@ -40,15 +44,34 @@ function mostrarPregunta(pregunta) {
         <button class="opcioness">${pregunta.opciones[2]}</button>
         <button class="opcioness">${pregunta.opciones[3]}</button>
     `;
+    
+    const botones = document.querySelectorAll(".opcioness");
+
+    botones.forEach(boton => {
+
+        boton.addEventListener("click", () => {
+
+            botones.forEach(b => {
+
+                b.disabled = true;
+
+                if (b.textContent.trim() === respuestaCorrecta.trim()) {
+                    b.style.backgroundColor = "green";
+                    b.style.color = "white";
+                }
+
+            });
+
+            if (boton.textContent.trim() !== respuestaCorrecta.trim()) {
+                boton.style.backgroundColor = "red";
+                boton.style.color = "white";
+            }
+
+        });
+
+    });
+
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -72,8 +95,6 @@ function obtenerPreguntaAleatoria(categoria) {
     return listaPreguntas[indiceAleatorio];
 }
 
-
-
 const categorias = [
     "GTA IV",
     "TEAM Fortress 2",
@@ -90,9 +111,6 @@ const mapaCategorias = {
 };
 
 botonGirar.addEventListener('click', () => {
-
-
-
     const giroAleatorio =
         Math.floor(Math.random() * 3000) + 3000;
 
@@ -100,13 +118,7 @@ botonGirar.addEventListener('click', () => {
 
     ruleta.style.transform =
         `rotate(${gradosTotales}deg)`;
-
-
 });
-
-
-
-
 
 
 ruleta.addEventListener('transitionend', () => {
@@ -151,14 +163,7 @@ ruleta.addEventListener('transitionend', () => {
 
 }
 
-
-
-
-
-
-
 });
-
 
 
 
