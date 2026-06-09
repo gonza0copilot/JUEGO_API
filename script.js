@@ -1,6 +1,8 @@
 const ruleta = document.getElementById('ruleta');
 const botonGirar = document.getElementById('botonGirar');
 const preguntaContainer = document.getElementById("pregunta-container");
+let vidas = 3;
+let aciertos = 0;
 
 const categorias = [
     "GTA IV",
@@ -79,12 +81,16 @@ function mostrarPregunta(pregunta, categoria) {
                 if (b.textContent.trim() === respuestaCorrecta.trim()) {
                     b.style.backgroundColor = "green";
                     b.style.color = "white";
+                    aciertos++;
+                    document.getElementById("aciertos-visual").textContent = aciertos;
                 }
             });
 
             if (boton.textContent.trim() !== respuestaCorrecta.trim()) {
                 boton.style.backgroundColor = "red";
                 boton.style.color = "white";
+                vidas--;
+                document.getElementById("vidas-visual").textContent = vidas;
             }
         });
     });
