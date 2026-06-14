@@ -95,6 +95,18 @@ function mostrarPregunta(pregunta, categoria) {
         });
     });
 }
+//cambiar sistema vidas
+if (vidas === 0) {
+    alert("¡Has perdido! Reiniciando juego...");
+    vidas = 3;
+                aciertos = 0;
+                document.getElementById("vidas-visual").textContent = vidas;
+                document.getElementById("aciertos-visual").textContent = aciertos;
+                if (respuestaCorrecta !== "") {
+            document.getElementById("vida-visual").textContent = vidas;
+        }
+}
+
 
 
 
