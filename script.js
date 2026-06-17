@@ -20,11 +20,11 @@ const mapaCategorias = {
 };
 
 const ImgCategorias = {
-    "GTA IV":"img/gta IV banner.jfif",
-    "TEAM Fortress 2":"img/TF banner.jpg",
-    "LEFT 4 DEAD 2":"img/l4d2 banner.jpg",
-    "MAFIA III":"img/mafiaIII banner.jpeg",
-    "EXTRA API":"img/pregunta banner.jfif"
+    "GTA IV": "img/gta IV banner.jfif",
+    "TEAM Fortress 2": "img/TF banner.jpg",
+    "LEFT 4 DEAD 2": "img/l4d2 banner.jpg",
+    "MAFIA III": "img/mafiaIII banner.jpeg",
+    "EXTRA API": "img/pregunta banner.jfif"
 }
 
 const URL_API =
@@ -33,6 +33,18 @@ const URL_API =
 let gradosTotales = 0;
 let preguntas = {};
 let respuestaCorrecta = "";
+
+function actualizarMarcador() {
+    const vidasVisual = document.getElementById('vidasVisual');
+    const aciertosVisual = document.getElementById('aciertosVisual');
+
+    if (vidasVisual) {
+        vidasVisual.textContent = "❤️".repeat(vidas) || " ¡Sin vidas!";
+    }
+    if (aciertosVisual) {
+        aciertosVisual.textContent = aciertos;
+    }
+}
 
 async function obtenerPreguntaAPI() {
     const respuesta = await fetch(URL_API);
@@ -59,53 +71,63 @@ function mostrarPregunta(pregunta, categoria) {
     respuestaCorrecta = pregunta.correcta;
 
     preguntaContainer.innerHTML = `
-    <img class="imagenJuego"
-             src="${ImgCategorias[categoria]}"
-             alt="${categoria}">
+        <img class="imagenJuego" src="${ImgCategorias[categoria]}" alt="${categoria}">
         <h2>${pregunta.pregunta}</h2>
-
-        <button class="opcioness">${pregunta.opciones[0]}</button>
-        <button class="opcioness">${pregunta.opciones[1]}</button>
-        <button class="opcioness">${pregunta.opciones[2]}</button>
-        <button class="opcioness">${pregunta.opciones[3]}</button>
+        <div class="opciones-container">
+            ${pregunta.opciones.map(op => `<button class="opcioness">${op}</button>`).join('')}
+        </div>
     `;
-      preguntaContainer.classList.remove("oculto");
+    preguntaContainer.classList.remove("oculto");
 
+    // Seleccionamos los nuevos botones creados
     const botones = document.querySelectorAll(".opcioness");
 
     botones.forEach(boton => {
         boton.addEventListener("click", () => {
-            botones.forEach(b => {
-                b.disabled = true;
+            const respuestaUsuario = boton.textContent.trim();
+            const esCorrecta = respuestaUsuario === respuestaCorrecta.trim();
 
-                if (b.textContent.trim() === respuestaCorrecta.trim()) {
-                    b.style.backgroundColor = "green";
-                    b.style.color = "white";
-                    aciertos++;
-                    document.getElementById("aciertos-visual").textContent = aciertos;
-                }
-            });
+            // Bloqueamos botones para que no sigan haciendo clic
+            botones.forEach(b => b.disabled = true);
 
-            if (boton.textContent.trim() !== respuestaCorrecta.trim()) {
+            if (esCorrecta) {
+                // SUMAR ACIERTOS
+                aciertos++;
+                boton.style.backgroundColor = "green";
+                boton.style.color = "white";
+            } else {
+                // RESTAR VIDAS
+                vidas--;
                 boton.style.backgroundColor = "red";
                 boton.style.color = "white";
-                vidas--;
-                document.getElementById("vidas-visual").textContent = vidas;
+
+                // Opcional: mostrar cuál era la correcta
+                botones.forEach(b => {
+                    if (b.textContent.trim() === respuestaCorrecta.trim()) {
+                        b.style.backgroundColor = "green";
+                    }
+                });
+            }
+
+            
+
+            
+            actualizarMarcador();
+            if (vidas === 0) {
+               mostrarFinDelJuego();
+            }
+            function mostrarFinDelJuego() {
+                const pantallaFinal = document.getElementById("pantaFinal");
+                const spanPuntos = document.getElementById("ultimaPuntuacion");
+
+                spanPuntos.textContent = aciertos; // Mostramos los aciertos
+                pantallaFinal.classList.remove("oculto"); // Mostramos el cartel
             }
         });
     });
 }
 //cambiar sistema vidas
-if (vidas === 0) {
-    alert("¡Has perdido! Reiniciando juego...");
-    vidas = 3;
-                aciertos = 0;
-                document.getElementById("vidas-visual").textContent = vidas;
-                document.getElementById("aciertos-visual").textContent = aciertos;
-                if (respuestaCorrecta !== "") {
-            document.getElementById("vida-visual").textContent = vidas;
-        }
-}
+
 
 
 
@@ -132,10 +154,10 @@ fetch("data.json")
 
 botonGirar.addEventListener('click', () => {
     botonGirar.disabled = true;
-      preguntaContainer.classList.add("oculto");
-      setTimeout(() => {
+    preguntaContainer.classList.add("oculto");
+    setTimeout(() => {
         preguntaContainer.innerHTML = "";
-    }, 500); 
+    }, 500);
 
     const giroAleatorio =
         Math.floor(Math.random() * 3000) + 3000;
@@ -164,7 +186,7 @@ ruleta.addEventListener('transitionend', () => {
     console.log("Categoria detectada:", categoria);
     console.log("Clave JSON:", mapaCategorias[categoria]);
 
-    
+
 
 
     if (categoria !== "EXTRA API") {
@@ -185,6 +207,19 @@ ruleta.addEventListener('transitionend', () => {
             });
     }
 });
+
+
+function reiniciarJuego() {
+    vidas = 3;
+    aciertos = 0;
+
+    // Ocultar el cartel
+    document.getElementById("pantaFinal").classList.add("oculto");
+
+    // Aquí puedes llamar a una función para resetear lo que necesites
+    // O simplemente recargar la página para limpiar todo fácilmente:
+    location.reload();
+}
 
 
 

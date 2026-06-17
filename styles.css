@@ -160,3 +160,14 @@ imagenJuego {
     justify-content: right;
     background-color: darkred;
 }
+.conteneitor img{
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 5px solid white;
+
+}
+.oculto {
+    display: none !important;
+}
