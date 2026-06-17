@@ -110,14 +110,14 @@ function mostrarPregunta(pregunta, categoria) {
             }
             actualizarMarcador();
             if (vidas === 0) {
-               mostrarFinDelJuego();
+               mostrarPantaFinal();
             }
            
         });
     });
 }
 
- function mostrarFinDelJuego() {
+ function mostrarPantaFinal() {
                 const pantallaFinal = document.getElementById("pantaFinal");
                 const spanPuntos = document.getElementById("ultimaPuntuacion");
 
