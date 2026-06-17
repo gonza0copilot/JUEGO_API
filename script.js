@@ -108,25 +108,22 @@ function mostrarPregunta(pregunta, categoria) {
                     }
                 });
             }
-
-            
-
-            
             actualizarMarcador();
             if (vidas === 0) {
                mostrarFinDelJuego();
             }
-            function mostrarFinDelJuego() {
+           
+        });
+    });
+}
+
+ function mostrarFinDelJuego() {
                 const pantallaFinal = document.getElementById("pantaFinal");
                 const spanPuntos = document.getElementById("ultimaPuntuacion");
 
                 spanPuntos.textContent = aciertos; // Mostramos los aciertos
                 pantallaFinal.classList.remove("oculto"); // Mostramos el cartel
             }
-        });
-    });
-}
-//cambiar sistema vidas
 
 
 
