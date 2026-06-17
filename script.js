@@ -110,20 +110,28 @@ function mostrarPregunta(pregunta, categoria) {
             }
             actualizarMarcador();
             if (vidas === 0) {
-               mostrarPantaFinal();
+                botonGirar.disabled = true;
+                preguntaContainer.innerHTML = "";
+                mostrarPantaFinal();
             }
-           
+
         });
     });
 }
 
- function mostrarPantaFinal() {
-                const pantallaFinal = document.getElementById("pantaFinal");
-                const spanPuntos = document.getElementById("ultimaPuntuacion");
+function mostrarPantaFinal() {
+    console.log("PANTALLA FINAL");
 
-                spanPuntos.textContent = aciertos; // Mostramos los aciertos
-                pantallaFinal.classList.remove("oculto"); // Mostramos el cartel
-            }
+    const pantallaFinal = document.getElementById("PantaFinal");
+    const spanPuntos = document.getElementById("ultimaPuntuacion");
+
+    spanPuntos.textContent = aciertos;
+
+    pantallaFinal.style.display = "flex";
+    pantallaFinal.classList.remove("oculto");
+
+    botonGirar.disabled = true;
+}
 
 
 
@@ -211,10 +219,7 @@ function reiniciarJuego() {
     aciertos = 0;
 
     // Ocultar el cartel
-    document.getElementById("pantaFinal").classList.add("oculto");
-
-    // Aquí puedes llamar a una función para resetear lo que necesites
-    // O simplemente recargar la página para limpiar todo fácilmente:
+    document.getElementById("PantaFinal").classList.add("oculto");
     location.reload();
 }
 
