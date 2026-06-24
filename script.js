@@ -107,10 +107,12 @@ function mostrarPregunta(pregunta, categoria) {
                 guardarInfo();
                 boton.style.backgroundColor = "green";
                 boton.style.color = "white";
+                actualizarMarcador();
             } else {
                 // RESTAR VIDAS
                 vidas--;
                 guardarInfo();
+
                 boton.style.backgroundColor = "red";
                 boton.style.color = "white";
                 actualizarMarcador();
