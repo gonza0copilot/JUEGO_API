@@ -1,8 +1,19 @@
 const ruleta = document.getElementById('ruleta');
 const botonGirar = document.getElementById('botonGirar');
 const preguntaContainer = document.getElementById("pregunta-container");
-let vidas = 3;
-let aciertos = 0;
+let vidas = parseInt(localStorage.getItem("vidas")) || 3;
+let aciertos = parseInt(localStorage.getItem("aciertos")) || 0;
+
+function guardarInfo() {
+    localStorage.setItem("vidas", vidas);
+    localStorage.setItem("aciertos", aciertos);
+}
+window.addEventListener("load", () => {
+    actualizarMarcador();
+});
+
+
+
 
 const categorias = [
     "GTA IV",
@@ -93,13 +104,16 @@ function mostrarPregunta(pregunta, categoria) {
             if (esCorrecta) {
                 // SUMAR ACIERTOS
                 aciertos++;
+                guardarInfo();
                 boton.style.backgroundColor = "green";
                 boton.style.color = "white";
             } else {
                 // RESTAR VIDAS
                 vidas--;
+                guardarInfo();
                 boton.style.backgroundColor = "red";
                 boton.style.color = "white";
+                actualizarMarcador();
 
                 // Opcional: mostrar cuál era la correcta
                 botones.forEach(b => {
@@ -108,7 +122,7 @@ function mostrarPregunta(pregunta, categoria) {
                     }
                 });
             }
-            actualizarMarcador();
+            
             if (vidas === 0) {
                 botonGirar.disabled = true;
                 preguntaContainer.innerHTML = "";
@@ -215,6 +229,9 @@ ruleta.addEventListener('transitionend', () => {
 
 
 function reiniciarJuego() {
+    localStorage.removeItem("vidas");
+    localStorage.removeItem("aciertos");
+
     vidas = 3;
     aciertos = 0;
 
