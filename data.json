@@ -3,9 +3,9 @@
         {
             "pregunta": "¿Cómo se llama el protagonista de GTA IV?",
             "opciones": [
-                "Niko Bellic",
-                "Tommy Vercetti",
                 "Carl Johnson",
+                "Tommy Vercetti",
+                "Niko Bellic",
                 "Claude"
             ],
             "correcta": "Niko Bellic"
@@ -13,48 +13,49 @@
         {
             "pregunta": "¿De qué país proviene Niko Bellic?",
             "opciones": [
+                "Croacia",
                 "Serbia",
                 "Estados Unidos",
-                "Rusia",
-                "Croacia"
+                "Rusia"
+                
             ],
             "correcta": "Serbia"
         },
         {
-            "pregunta": "¿Cómo se llama el primo de Niko?",
+            "pregunta": "¿Cual es el secreto de Michelle?",
             "opciones": [
-                "Roman",
-                "Luis",
-                "Johnny",
-                "Brucie"
+                "Es hombre",
+                "Tiene muchas adicciones",
+                "Trabaja para el gobierno",
+                "No tiene trabajo"
             ],
-            "correcta": "Roman"
+            "correcta": "Trabaja para el gobierno"
         },
         {
             "pregunta": "¿En qué ciudad se desarrolla GTA IV?",
             "opciones": [
-                "Liberty City",
                 "Vice City",
                 "Los Santos",
-                "San Fierro"
+                "San Fierro",
+                "Liberty City"
             ],
             "correcta": "Liberty City"
         },
         {
-            "pregunta": "¿Qué negocio posee Roman?",
+            "pregunta": "¿Que personaje debes matar para ayudar a Dwayne?",
             "opciones": [
-                "Empresa de taxis",
-                "Restaurante",
-                "Banco",
-                "Taller mecánico"
+                "Little Jacob",
+                "Mr. Bulgarin",
+                "Playboy X",
+                "Roman Bellic"
             ],
             "correcta": "Empresa de taxis"
         },
         {
             "pregunta": "¿Qué personaje obsesionado con el gimnasio ayuda a Niko?",
             "opciones": [
-                "Brucie",
                 "Packie",
+                "Brucie",
                 "Dwayne",
                 "Dimitri"
             ],
@@ -71,44 +72,44 @@
             "correcta": "Dimitri Rascalov"
         },
         {
-            "pregunta": "¿Qué amigo jamaicano ayuda frecuentemente a Niko?",
+            "pregunta": "¿Donde podemos encontrar a Little Jacob?",
             "opciones": [
-                "Little Jacob",
-                "Badman",
-                "Packie",
-                "Luis"
+                "Burger Shot",
+                "Homebrew Cafe",
+                "Roman's Taxi",
+                "En el piso franco de niko"
             ],
-            "correcta": "Little Jacob"
+            "correcta": "Homebrew Cafe"
         },
         {
             "pregunta": "¿En qué año fue lanzado GTA IV?",
             "opciones": [
-                "2008",
                 "2006",
                 "2010",
-                "2004"
+                "2004",
+                "2008"
             ],
             "correcta": "2008"
         },
         {
-            "pregunta": "¿Qué empresa desarrolló GTA IV?",
+            "pregunta": "¿De que marca es el telefono de Niko?",
             "opciones": [
-                "Rockstar North",
-                "Valve",
-                "Ubisoft",
-                "Bethesda"
+                "iFruit",
+                "Bean Machine",
+                "Badger",
+                "BitterSweet"
             ],
-            "correcta": "Rockstar North"
+            "correcta": "Badger"
         },
         {
-            "pregunta": "¿Cuál es el apellido de Niko?",
+            "pregunta": "¿Cual es la relacion de Niko y Roman?",
             "opciones": [
-                "Bellic",
-                "Vercetti",
-                "Johnson",
-                "Klebitz"
+                "Primos",
+                "Hermanos",
+                "Amigos",
+                "Amante"
             ],
-            "correcta": "Bellic"
+            "correcta": "Primos"
         },
         {
             "pregunta": "¿Qué personaje protagoniza The Lost and Damned?",
@@ -131,24 +132,24 @@
             "correcta": "Luis Lopez"
         },
         {
-            "pregunta": "¿Qué organización criminal lidera Jimmy Pegorino?",
+            "pregunta": "¿Cual es el apellido de la Mafia con la que niko se involucra?",
             "opciones": [
-                "Familia Pegorino",
                 "Familia Leone",
-                "The Lost",
-                "Triadas"
+                "Familia Corleone",
+                "Familia Bellic",
+                "Familia Pegorino"
             ],
             "correcta": "Familia Pegorino"
         },
         {
-            "pregunta": "¿Qué color predomina en la portada oficial de GTA IV?",
+            "pregunta": "¿Que personaje toma testosterona de tiburon?",
             "opciones": [
-                "Blanco",
-                "Azul",
-                "Rojo",
-                "Verde"
+                "Packie",
+                "Mike",
+                "Brucie",
+                "Playboy X"
             ],
-            "correcta": "Blanco"
+            "correcta": "Brucie"
         }
     ],
     "tf2": [
@@ -163,17 +164,17 @@
             "correcta": "9"
         },
         {
-            "pregunta": "¿Qué clase puede construir torretas?",
+            "pregunta": "¿Cuantas clases pueden usar la escopeta de secundaria?",
             "opciones": [
-                "Engineer",
-                "Soldier",
-                "Pyro",
-                "Medic"
+                "2",
+                "3",
+                "4",
+                "9"
             ],
-            "correcta": "Engineer"
+            "correcta": "4"
         },
         {
-            "pregunta": "¿Qué clase utiliza un lanzallamas?",
+            "pregunta": "¿De que clase se sabe menos acerca de su identidad?",
             "opciones": [
                 "Pyro",
                 "Demoman",
@@ -183,62 +184,62 @@
             "correcta": "Pyro"
         },
         {
-            "pregunta": "¿Qué clase es conocida por su gran cantidad de vida?",
+            "pregunta": "¿Que clase se puede ver manejando un auto en su video promocional?",
             "opciones": [
                 "Heavy",
                 "Scout",
                 "Spy",
                 "Sniper"
             ],
-            "correcta": "Heavy"
-        },
-        {
-            "pregunta": "¿Qué clase puede hacerse invisible?",
-            "opciones": [
-                "Spy",
-                "Medic",
-                "Engineer",
-                "Demoman"
-            ],
-            "correcta": "Spy"
-        },
-        {
-            "pregunta": "¿Qué clase utiliza un rifle de francotirador?",
-            "opciones": [
-                "Sniper",
-                "Soldier",
-                "Scout",
-                "Heavy"
-            ],
             "correcta": "Sniper"
         },
         {
-            "pregunta": "¿Qué clase puede curar a sus compañeros?",
+            "pregunta": "¿Cual es el rango maximo en casual?",
             "opciones": [
-                "Medic",
-                "Engineer",
-                "Pyro",
-                "Heavy"
+                "420",
+                "67",
+                "1200",
+                "1000000"
             ],
-            "correcta": "Medic"
+            "correcta": "1200"
+        },
+        {
+            "pregunta": "¿Cuantas canciones hay en el soundtrack del juego?",
+            "opciones": [
+                "9",
+                "29",
+                "50",
+                "33"
+            ],
+            "correcta": "33"
+        },
+        {
+            "pregunta": "¿Como se llama la ultima major update?",
+            "opciones": [
+                "Uber Update",
+                "Jungle Inferno",
+                "WAR! Update",
+                "Sniper vs. Spy"
+            ],
+            "correcta": "Jungle Inferno"
         },
         {
             "pregunta": "¿Qué clase utiliza principalmente una pala como arma cuerpo a cuerpo?",
             "opciones": [
-                "Soldier",
                 "Spy",
+                "Soldier",
                 "Scout",
                 "Medic"
-            ],
+            ],  
             "correcta": "Soldier"
         },
         {
             "pregunta": "¿Qué empresa desarrolló Team Fortress 2?",
             "opciones": [
-                "Valve",
+                "Rockstar",
                 "Ubisoft",
                 "EA",
-                "Rockstar"
+                "Valve"
             ],
             "correcta": "Valve"
         },
@@ -253,54 +254,55 @@
             "correcta": "2007"
         },
         {
-            "pregunta": "¿Cuál es la velocidad característica del Scout?",
+            "pregunta": "¿Hasta cuantos saltos puede hacer el scout (contando equipamiento)?",
             "opciones": [
-                "Es la clase más rápida",
-                "Es la más lenta",
-                "No puede correr",
-                "Depende del mapa"
+                "3",
+                "9",
+                "6",
+                "4"
             ],
-            "correcta": "Es la clase más rápida"
+            "correcta": "6"
         },
         {
-            "pregunta": "¿Qué modo de juego consiste en empujar una carga explosiva?",
+            "pregunta": "¿Cual fue el ultimo modo de juego agregado?",
             "opciones": [
-                "Payload",
-                "Arena",
+                "VS Saxton Hale",
+                "CTF",
                 "King of the Hill",
                 "Mannpower"
             ],
-            "correcta": "Payload"
+            "correcta": "VS Saxton Hale"
         },
         {
-            "pregunta": "¿Qué clase usa un lanzagranadas?",
+            "pregunta": "¿Qué clase tiene una espada maldita?",
             "opciones": [
-                "Demoman",
                 "Pyro",
                 "Engineer",
+                "Demoman",
                 "Spy"
             ],
             "correcta": "Demoman"
         },
         {
-            "pregunta": "¿Qué frase se volvió famosa por el Heavy?",
+            "pregunta": "¿Cuanto cuesta disparar el arma del heavy por 12 segundos?",
             "opciones": [
-                "I am Heavy Weapons Guy",
-                "Rise and Shine",
-                "Boom Headshot",
-                "Let's Go"
+                "200$",
+                "10.000$",
+                "400.000$",
+                "800.000$"
+                
             ],
-            "correcta": "I am Heavy Weapons Guy"
+            "correcta": "400.000$"
         },
         {
-            "pregunta": "¿Qué color representa a uno de los equipos principales?",
+            "pregunta": "¿Como se llama la ametralladora del heavy?",
             "opciones": [
-                "Rojo",
-                "Verde",
-                "Amarillo",
-                "Negro"
+                "Spaya",
+                "Sasha",
+                "Slava",
+                "Smaya"
             ],
-            "correcta": "Rojo"
+            "correcta": "Sasha"
         }
     ],
     "l4d2": [
