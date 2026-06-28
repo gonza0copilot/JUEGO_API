@@ -15,6 +15,7 @@ body {
 }
 
 .contenedor {
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -24,13 +25,15 @@ body {
 }
 
 .ruleta {
-    width: 400px;
-    height: 400px;
+
+    width: min(90vw, 400px);
+    height: min(90vw, 400px);
     border-radius: 50%;
     border: 10px solid black;
     position: relative;
     overflow: hidden;
     transition: transform 4s cubic-bezier(0.25, 0.1, 0.25, 1);
+
 
 }
 
@@ -47,7 +50,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .opcion span {
@@ -60,7 +63,7 @@ body {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-    
+
 }
 
 .flecha {
@@ -74,16 +77,19 @@ body {
 }
 
 button {
+    max-width: 300px;
+    width: 100%;
+
     margin-top: 30px;
     padding: 15px 30px;
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-    background-color: darkgray  ;
+    background-color: darkgray;
     border: none;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-     text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.5);
     color: bisque;
     border: 5px solid bisque;
 
@@ -94,15 +100,16 @@ button:active {
 }
 
 .fondo {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
     padding-top: 20px;
-    background-color: darkgray  ;
+    background-color: darkgray;
     color: bisque;
-     text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.5);
     padding-bottom: 10px;
     padding-top: 10px;
     border: 5px solid bisque;
@@ -122,9 +129,9 @@ button:active {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-    width: 80%;
+    width: 95%;
     max-width: 700px;
-    background: darkgray  ;
+    background: darkgray;
     padding: 20px;
     border-radius: 15px;
     text-align: center;
@@ -137,14 +144,12 @@ button:active {
 }
 
 
-imagenJuego {
-    width: 100%;
-    height: 50px;
-    object-fit: cover;
-
-    border-radius: 10px;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
+.imagenJuego {
+    width:100%;
+    max-height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
 }
 
 
@@ -162,18 +167,22 @@ imagenJuego {
 
 .marcador {
 
-    padding-left: 550px;
-    width: 61%;
+    width: 90%;
+    max-width: 700px;
+
     margin-top: 20px;
-    font-size: 18px;
-    color: black;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    font-size: 20px;
-    align-items: right;
+
     display: flex;
-    justify-content: right;
-    background-color: darkgray  ;
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px;
+
+    background-color: darkgray;
     border: 5px solid bisque;
+
+    font-size: 20px;
+    color: black;
 }
 
 .conteneitor img {
@@ -214,4 +223,55 @@ imagenJuego {
     border-radius: 15px;
     padding: 20px;
     border: 5px solid bisque;
+}
+
+@media (max-width:768px){
+
+    body{
+        padding:15px;
+    }
+
+    .fondo h1{
+        font-size:22px;
+        text-align:center;
+    }
+
+    .marcador{
+        width:100%;
+        font-size:16px;
+    }
+
+    .ruleta{
+        width:85vw;
+        height:85vw;
+    }
+
+    .opcion span{
+        width:75px;
+        font-size:13px;
+        transform:rotate(45deg) translateX(30px);
+    }
+
+    .flecha{
+        top:-18px;
+        font-size:24px;
+    }
+
+    #pregunta-container{
+        width:100%;
+    }
+
+    .opcioness{
+        font-size:15px;
+        padding:15px;
+    }
+
+    .conteneitor{
+        width:90%;
+    }
+
+    .conteneitor img{
+        width:100%;
+    }
+
 }
