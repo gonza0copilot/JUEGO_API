@@ -86,7 +86,6 @@ button {
     font-weight: bold;
     cursor: pointer;
     background-color: darkgray;
-    border: none;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.5);
@@ -163,7 +162,7 @@ button:active {
 
     padding: 15px;
 
-    border: none;
+    border: 5px solid bisque;
     border-radius: 10px;
 
     font-size: 18px;
