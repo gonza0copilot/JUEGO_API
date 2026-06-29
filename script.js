@@ -101,7 +101,7 @@ function mostrarPregunta(pregunta, categoria) {
     // Seleccionamos los nuevos botones creados
     const botones = document.querySelectorAll(".opcioness");
 
-    
+    // validador de respuestas correctas
 
     botones.forEach(boton => {
         boton.addEventListener("click", () => {
