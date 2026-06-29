@@ -93,6 +93,8 @@ function mostrarPregunta(pregunta, categoria) {
     // Seleccionamos los nuevos botones creados
     const botones = document.querySelectorAll(".opcioness");
 
+    
+
     botones.forEach(boton => {
         boton.addEventListener("click", () => {
             const respuestaUsuario = boton.textContent.trim();
