@@ -154,14 +154,20 @@ button:active {
 
 
 .opcioness{
-    width:90%;
-    max-width:450px;
-    margin:10px 0;
-    padding:15px;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-    font-size:18px;
+    display: block;
+
+    width: 90%;
+    max-width: 500px;
+
+    margin: 10px auto;   /* <-- centra el botón */
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 18px;
+    cursor: pointer;
 }
 
 .marcador {
@@ -224,10 +230,11 @@ button:active {
     border: 5px solid bisque;
 }
 .opciones-container{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* Centra los botones */
+    justify-content: center;
+    width: 100%;
 }
 
 @media (max-width:768px){
