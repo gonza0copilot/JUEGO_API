@@ -1,13 +1,17 @@
+// Selección de elementos del DOM y estado inicial del juego.
 const ruleta = document.getElementById('ruleta');
 const botonGirar = document.getElementById('botonGirar');
 const preguntaContainer = document.getElementById("pregunta-container");
 let vidas = parseInt(localStorage.getItem("vidas")) || 3;
 let aciertos = parseInt(localStorage.getItem("aciertos")) || 0;
 
+// Guardamos el estado actual de vidas y aciertos para evitar perdida.
 function guardarInfo() {
     localStorage.setItem("vidas", vidas);
     localStorage.setItem("aciertos", aciertos);
 }
+
+// Actualiza el marcador cuando la página termina de cargar.
 window.addEventListener("load", () => {
     actualizarMarcador();
 });
@@ -15,6 +19,7 @@ window.addEventListener("load", () => {
 
 
 
+// Lista de categorías disponibles en la ruleta del juego.
 const categorias = [
     "GTA IV",
     "TEAM Fortress 2",
@@ -45,6 +50,7 @@ let gradosTotales = 0;
 let preguntas = {};
 let respuestaCorrecta = "";
 
+// Actualizamos los contadores visuales de vidas y aciertos en la interfaz.
 function actualizarMarcador() {
     const vidasVisual = document.getElementById('vidasVisual');
     const aciertosVisual = document.getElementById('aciertosVisual');
@@ -57,6 +63,7 @@ function actualizarMarcador() {
     }
 }
 
+// Obtiene una pregunta desde la API externa y la prepara y las randomiza.
 async function obtenerPreguntaAPI() {
     const respuesta = await fetch(URL_API);
     const datos = await respuesta.json();
@@ -78,6 +85,7 @@ async function obtenerPreguntaAPI() {
     };
 }
 
+// Mostramos la pregunta actual y asignamos la lógica para responder.
 function mostrarPregunta(pregunta, categoria) {
     respuestaCorrecta = pregunta.correcta;
 
@@ -137,6 +145,7 @@ function mostrarPregunta(pregunta, categoria) {
     });
 }
 
+// Muestra la pantalla final con la puntuación acumulada.
 function mostrarPantaFinal() {
     console.log("PANTALLA FINAL");
 
@@ -158,6 +167,7 @@ function mostrarPantaFinal() {
 
 
 
+// Elige una pregunta aleatoria desde el conjunto cargado localmente.
 function obtenerPreguntaAleatoria(categoria) {
 
     const listaPreguntas = preguntas[categoria];
@@ -168,6 +178,7 @@ function obtenerPreguntaAleatoria(categoria) {
     return listaPreguntas[indiceAleatorio];
 }
 
+// Carga las preguntas desde el archivo local al iniciar.
 fetch("data.json")
     .then(respuesta => respuesta.json())
     .then(datos => {
@@ -175,6 +186,7 @@ fetch("data.json")
         console.log("Preguntas cargadas");
     });
 
+// Inicia el giro de la ruleta cuando se presiona el botón.
 botonGirar.addEventListener('click', () => {
     botonGirar.disabled = true;
     preguntaContainer.classList.add("oculto");
@@ -192,6 +204,7 @@ botonGirar.addEventListener('click', () => {
 });
 
 
+// Determina la categoría final de la ruleta al terminar la animación.
 ruleta.addEventListener('transitionend', () => {
     botonGirar.disabled = false;
 
@@ -232,6 +245,7 @@ ruleta.addEventListener('transitionend', () => {
 });
 
 
+// Reinicia el juego y borra los datos guardados.
 function reiniciarJuego() {
     localStorage.removeItem("vidas");
     localStorage.removeItem("aciertos");
