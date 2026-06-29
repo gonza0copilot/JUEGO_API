@@ -44,7 +44,7 @@ body {
     width: 50%;
     height: 50%;
     transform-origin: 100% 100%;
-    transform: rotate(calc(36deg * var(--i)));
+    transform: rotate(calc(72deg * var(--i)));
     clip-path: polygon(100% 100%, 100% 0, 0 0, 0 100%);
     background-color: var(--clr);
     display: flex;
