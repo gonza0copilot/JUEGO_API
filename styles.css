@@ -275,6 +275,7 @@ button:active {
     .opcioness{
         font-size:15px;
         padding:15px;
+        border: 5px solid bisque;
     }
 
     .conteneitor{
